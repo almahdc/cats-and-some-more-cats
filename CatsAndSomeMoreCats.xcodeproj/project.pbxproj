@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		7D6F3C20296C7246001AA6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C1F296C7246001AA6DF /* AppDelegate.swift */; };
-		7D6F3C22296C7246001AA6DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C21296C7246001AA6DF /* SceneDelegate.swift */; };
-		7D6F3C24296C7246001AA6DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C23296C7246001AA6DF /* ViewController.swift */; };
 		7D6F3C29296C724A001AA6DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D6F3C28296C724A001AA6DF /* Assets.xcassets */; };
 		7D6F3C2C296C724A001AA6DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6F3C2A296C724A001AA6DF /* LaunchScreen.storyboard */; };
 		7D6F3C3A296C725A001AA6DF /* CatsAndSomeMoreCatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C39296C725A001AA6DF /* CatsAndSomeMoreCatsTests.swift */; };
 		7D6F3C4A296C81CE001AA6DF /* RequestExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C49296C81CE001AA6DF /* RequestExecuter.swift */; };
 		7D6F3C4C296C82A3001AA6DF /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C4B296C82A3001AA6DF /* RequestFactory.swift */; };
 		7D6F3C4E296C82C6001AA6DF /* CatProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C4D296C82C6001AA6DF /* CatProvider.swift */; };
+		7D6F3C50296C8CEB001AA6DF /* StatusCodeListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C4F296C8CEB001AA6DF /* StatusCodeListController.swift */; };
+		7D6F3C52296C8CF9001AA6DF /* StatusCodeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C51296C8CF9001AA6DF /* StatusCodeListViewModel.swift */; };
+		7D6F3C54296C8D06001AA6DF /* CatDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C53296C8D06001AA6DF /* CatDetailsController.swift */; };
+		7D6F3C56296C8D17001AA6DF /* CatDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C55296C8D17001AA6DF /* CatDetailsViewModel.swift */; };
+		7D6F3C5C296C9E3B001AA6DF /* TwoLabelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C5B296C9E3B001AA6DF /* TwoLabelsCell.swift */; };
+		7D6F3C5E296C9F5B001AA6DF /* ImageWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C5D296C9F5B001AA6DF /* ImageWithLabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +35,6 @@
 /* Begin PBXFileReference section */
 		7D6F3C1C296C7246001AA6DF /* CatsAndSomeMoreCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsAndSomeMoreCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D6F3C1F296C7246001AA6DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D6F3C21296C7246001AA6DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7D6F3C23296C7246001AA6DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7D6F3C28296C724A001AA6DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D6F3C2B296C724A001AA6DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D6F3C2D296C724A001AA6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +43,12 @@
 		7D6F3C49296C81CE001AA6DF /* RequestExecuter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecuter.swift; sourceTree = "<group>"; };
 		7D6F3C4B296C82A3001AA6DF /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		7D6F3C4D296C82C6001AA6DF /* CatProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProvider.swift; sourceTree = "<group>"; };
+		7D6F3C4F296C8CEB001AA6DF /* StatusCodeListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeListController.swift; sourceTree = "<group>"; };
+		7D6F3C51296C8CF9001AA6DF /* StatusCodeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeListViewModel.swift; sourceTree = "<group>"; };
+		7D6F3C53296C8D06001AA6DF /* CatDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsController.swift; sourceTree = "<group>"; };
+		7D6F3C55296C8D17001AA6DF /* CatDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsViewModel.swift; sourceTree = "<group>"; };
+		7D6F3C5B296C9E3B001AA6DF /* TwoLabelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelsCell.swift; sourceTree = "<group>"; };
+		7D6F3C5D296C9F5B001AA6DF /* ImageWithLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithLabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,14 +92,13 @@
 			children = (
 				7D6F3C2D296C724A001AA6DF /* Info.plist */,
 				7D6F3C1F296C7246001AA6DF /* AppDelegate.swift */,
-				7D6F3C21296C7246001AA6DF /* SceneDelegate.swift */,
-				7D6F3C23296C7246001AA6DF /* ViewController.swift */,
 				7D6F3C44296C7480001AA6DF /* API */,
 				7D6F3C46296C7632001AA6DF /* Models */,
 				7D6F3C45296C74F6001AA6DF /* Networking */,
 				7D6F3C42296C7456001AA6DF /* Presentation */,
 				7D6F3C40296C726D001AA6DF /* Resources */,
 				7D6F3C43296C7478001AA6DF /* UI */,
+				7D6F3C63296CBB5C001AA6DF /* Utils */,
 			);
 			path = CatsAndSomeMoreCats;
 			sourceTree = "<group>";
@@ -116,6 +123,10 @@
 		7D6F3C42296C7456001AA6DF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7D6F3C53296C8D06001AA6DF /* CatDetailsController.swift */,
+				7D6F3C55296C8D17001AA6DF /* CatDetailsViewModel.swift */,
+				7D6F3C4F296C8CEB001AA6DF /* StatusCodeListController.swift */,
+				7D6F3C51296C8CF9001AA6DF /* StatusCodeListViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -123,6 +134,7 @@
 		7D6F3C43296C7478001AA6DF /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7D6F3C61296C9F70001AA6DF /* ImageWithLabelView */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -149,6 +161,22 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7D6F3C61296C9F70001AA6DF /* ImageWithLabelView */ = {
+			isa = PBXGroup;
+			children = (
+				7D6F3C5D296C9F5B001AA6DF /* ImageWithLabelView.swift */,
+				7D6F3C5B296C9E3B001AA6DF /* TwoLabelsCell.swift */,
+			);
+			path = ImageWithLabelView;
+			sourceTree = "<group>";
+		};
+		7D6F3C63296CBB5C001AA6DF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,12 +279,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D6F3C24296C7246001AA6DF /* ViewController.swift in Sources */,
 				7D6F3C4E296C82C6001AA6DF /* CatProvider.swift in Sources */,
 				7D6F3C4C296C82A3001AA6DF /* RequestFactory.swift in Sources */,
 				7D6F3C20296C7246001AA6DF /* AppDelegate.swift in Sources */,
+				7D6F3C56296C8D17001AA6DF /* CatDetailsViewModel.swift in Sources */,
 				7D6F3C4A296C81CE001AA6DF /* RequestExecuter.swift in Sources */,
-				7D6F3C22296C7246001AA6DF /* SceneDelegate.swift in Sources */,
+				7D6F3C5C296C9E3B001AA6DF /* TwoLabelsCell.swift in Sources */,
+				7D6F3C5E296C9F5B001AA6DF /* ImageWithLabelView.swift in Sources */,
+				7D6F3C54296C8D06001AA6DF /* CatDetailsController.swift in Sources */,
+				7D6F3C50296C8CEB001AA6DF /* StatusCodeListController.swift in Sources */,
+				7D6F3C52296C8CF9001AA6DF /* StatusCodeListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
