@@ -18,8 +18,8 @@ struct RequestFactory {
         guard let url = makeGetCatURL(endpoint: statusCode) else {
             fatalError("Invalid url")
         }
-        var urlRequest = URLRequest(url: url)
-        return urlRequest
+
+        return URLRequest(url: url)
     }
     
     private static func makeGetCatURL(endpoint: String) -> URL? {
