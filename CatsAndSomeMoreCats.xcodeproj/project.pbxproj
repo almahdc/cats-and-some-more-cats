@@ -13,6 +13,9 @@
 		7D6F3C29296C724A001AA6DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D6F3C28296C724A001AA6DF /* Assets.xcassets */; };
 		7D6F3C2C296C724A001AA6DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6F3C2A296C724A001AA6DF /* LaunchScreen.storyboard */; };
 		7D6F3C3A296C725A001AA6DF /* CatsAndSomeMoreCatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C39296C725A001AA6DF /* CatsAndSomeMoreCatsTests.swift */; };
+		7D6F3C4A296C81CE001AA6DF /* RequestExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C49296C81CE001AA6DF /* RequestExecuter.swift */; };
+		7D6F3C4C296C82A3001AA6DF /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C4B296C82A3001AA6DF /* RequestFactory.swift */; };
+		7D6F3C4E296C82C6001AA6DF /* CatProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C4D296C82C6001AA6DF /* CatProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 		7D6F3C2D296C724A001AA6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D6F3C37296C725A001AA6DF /* CatsAndSomeMoreCatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsAndSomeMoreCatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D6F3C39296C725A001AA6DF /* CatsAndSomeMoreCatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAndSomeMoreCatsTests.swift; sourceTree = "<group>"; };
+		7D6F3C49296C81CE001AA6DF /* RequestExecuter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecuter.swift; sourceTree = "<group>"; };
+		7D6F3C4B296C82A3001AA6DF /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		7D6F3C4D296C82C6001AA6DF /* CatProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,8 @@
 		7D6F3C44296C7480001AA6DF /* API */ = {
 			isa = PBXGroup;
 			children = (
+				7D6F3C4D296C82C6001AA6DF /* CatProvider.swift */,
+				7D6F3C4B296C82A3001AA6DF /* RequestFactory.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 		7D6F3C45296C74F6001AA6DF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				7D6F3C49296C81CE001AA6DF /* RequestExecuter.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -243,7 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D6F3C24296C7246001AA6DF /* ViewController.swift in Sources */,
+				7D6F3C4E296C82C6001AA6DF /* CatProvider.swift in Sources */,
+				7D6F3C4C296C82A3001AA6DF /* RequestFactory.swift in Sources */,
 				7D6F3C20296C7246001AA6DF /* AppDelegate.swift in Sources */,
+				7D6F3C4A296C81CE001AA6DF /* RequestExecuter.swift in Sources */,
 				7D6F3C22296C7246001AA6DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
