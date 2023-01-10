@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D66F94B296D919500C3C510 /* UIImageView+ResizeWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D66F94A296D919500C3C510 /* UIImageView+ResizeWithImage.swift */; };
 		7D6F3C20296C7246001AA6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C1F296C7246001AA6DF /* AppDelegate.swift */; };
 		7D6F3C29296C724A001AA6DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D6F3C28296C724A001AA6DF /* Assets.xcassets */; };
 		7D6F3C2C296C724A001AA6DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6F3C2A296C724A001AA6DF /* LaunchScreen.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D66F94A296D919500C3C510 /* UIImageView+ResizeWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ResizeWithImage.swift"; sourceTree = "<group>"; };
 		7D6F3C1C296C7246001AA6DF /* CatsAndSomeMoreCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsAndSomeMoreCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D6F3C1F296C7246001AA6DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D6F3C28296C724A001AA6DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D66F949296D916700C3C510 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7D66F94A296D919500C3C510 /* UIImageView+ResizeWithImage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		7D6F3C13296C7245001AA6DF = {
 			isa = PBXGroup;
 			children = (
@@ -148,9 +158,10 @@
 		7D6F3C43296C7478001AA6DF /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7D6F3C70296CE3ED001AA6DF /* Button.swift */,
 				7D6F3C69296CCE53001AA6DF /* ImageWithLabelView */,
 				7D6F3C68296CCE42001AA6DF /* TwoLabelsCell */,
-				7D6F3C70296CE3ED001AA6DF /* Button.swift */,
+				7D66F949296D916700C3C510 /* Utils */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -321,6 +332,7 @@
 			files = (
 				7D6F3C4E296C82C6001AA6DF /* CatProvider.swift in Sources */,
 				7D6F3C73296CEED2001AA6DF /* ImageWithTitleItem.swift in Sources */,
+				7D66F94B296D919500C3C510 /* UIImageView+ResizeWithImage.swift in Sources */,
 				7D6F3C4C296C82A3001AA6DF /* RequestFactory.swift in Sources */,
 				7D6F3C67296CCE3E001AA6DF /* TwoLabelsItem.swift in Sources */,
 				7D6F3C20296C7246001AA6DF /* AppDelegate.swift in Sources */,
