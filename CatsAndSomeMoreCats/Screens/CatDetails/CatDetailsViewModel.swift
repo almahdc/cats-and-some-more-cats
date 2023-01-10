@@ -44,15 +44,20 @@ final class CatDetailsViewModel {
         imageWithLabelItem.loadingState.value = .loading
         catProvider.cat(statusCode: statusCode) { [weak self] result in
             switch result {
-            case let .success(image):
+            case let .success(imageData):
+                guard let image = UIImage.init(data: imageData) else {
+                    self?.handleFailure()
+                    return
+                }
                 self?.imageWithLabelItem.loadingState.value = .loaded(image: image)
-            case .failure(.badData):
-                self?.imageWithLabelItem.loadingState.value = .failure(action: { [unowned self] in self?.requestCat(statusCode: statusCode) })
-                self?.didFail("There is something wrong with the data, we're working on it.")
-            case .failure(.generic(error: _)):
-                self?.imageWithLabelItem.loadingState.value = .failure(action: { [unowned self] in self?.requestCat(statusCode: statusCode) })
-                self?.didFail("Sorry, the data can't be shown at the moment.")
+            case .failure:
+                self?.handleFailure()
             }
         }
+    }
+    
+    private func handleFailure() {
+        imageWithLabelItem.loadingState.value = .failure(action: { [unowned self] in requestCat(statusCode: statusCode) })
+        didFail("Sorry, the data can't be shown at the moment.")
     }
 }
