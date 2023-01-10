@@ -14,12 +14,17 @@ final class StatusCodeListViewModel {
     
     // MARK: – Sections –
     
-    lazy var sections = makeSections()
+    var sections: [TwoLabelsItem] {
+        bindableSections.value
+    }
 
-    private func makeSections() -> [TwoLabelsItem] {
-        HTTPStatusCode.allCases.map { statusCode in
-                .init(leftTitle: "\(statusCode.rawValue)", wasTapped: .init(value: false))
+    lazy var bindableSections = makeSections()
+
+    private func makeSections() -> Bindable<[TwoLabelsItem]> {
+        let twoLabelsItems = HTTPStatusCode.allCases.map { statusCode in
+                TwoLabelsItem(leftTitle: "\(statusCode.rawValue)", wasTapped: .init(value: false))
         }
+        return .init(value: twoLabelsItems)
     }
     
     // MARK: – Methods –
@@ -27,5 +32,16 @@ final class StatusCodeListViewModel {
     func didSelect(section: Int) {
         sections[section].wasTapped.value = true
         showCatDetails(sections[section].leftTitle)
+
+        remakeSectionsSoThatLastSelectedSectionIsFirst(selectedSection: section)
+    }
+    
+    // MARK: – Remake sections –
+    
+    private func remakeSectionsSoThatLastSelectedSectionIsFirst(selectedSection: Int) {
+        var sections = sections
+        let selectedTwoLabelsItem = sections.remove(at: selectedSection)
+        sections.insert(selectedTwoLabelsItem, at: 0)
+        bindableSections.value = sections
     }
 }

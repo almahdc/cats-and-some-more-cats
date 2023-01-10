@@ -31,23 +31,12 @@ final class CatDetailsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bindViewModel()
         setUpView()
 
+        bindViewModel()
         viewModel.start()
     }
-
-    // MARK: – Bind view model –
-
-    private func bindViewModel() {
-        viewModel.didFail = { [unowned self] message in
-            let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-            let alertAction = UIAlertAction(title: "OK", style: .default)
-            alertController.addAction(alertAction)
-            present(alertController, animated: true)
-        }
-    }
-
+    
     // MARK: – Set up views –
 
     private func setUpView() {
@@ -62,6 +51,17 @@ final class CatDetailsController: UIViewController {
             imageWithLabelView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ]
         NSLayoutConstraint.activate(viewConstraints)
+    }
+
+    // MARK: – Bind view model –
+
+    private func bindViewModel() {
+        viewModel.didFail = { [unowned self] message in
+            let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(alertAction)
+            present(alertController, animated: true)
+        }
     }
 }
 

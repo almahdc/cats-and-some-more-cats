@@ -30,23 +30,16 @@ final class StatusCodeListController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: – Lifecycle methods –
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bindViewModel()
         setUpTableView()
-    }
-    
-    // MARK: – Bind view model –
 
-    private func bindViewModel() {
-        viewModel.showCatDetails = { [unowned self] statusCode in
-            let catDetailsController = CatDetailsController.make(statusCode: statusCode)
-            present(catDetailsController, animated: true)
-        }
+        bindViewModel()
+        bindReloadSections()
     }
     
     // MARK: – Set up views –
@@ -66,6 +59,21 @@ final class StatusCodeListController: UIViewController {
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ]
         NSLayoutConstraint.activate(tableViewConstraints)
+    }
+
+    // MARK: – Binding –
+
+    private func bindViewModel() {
+        viewModel.showCatDetails = { [unowned self] statusCode in
+            let catDetailsController = CatDetailsController.make(statusCode: statusCode)
+            present(catDetailsController, animated: true)
+        }
+    }
+
+    private func bindReloadSections() {
+        viewModel.bindableSections.bind(self) { observer, sections in
+            observer.tableView.reloadData()
+        }
     }
 }
 

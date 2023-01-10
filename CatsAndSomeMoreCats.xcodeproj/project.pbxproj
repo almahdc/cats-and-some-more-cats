@@ -90,6 +90,8 @@
 		7D66F949296D916700C3C510 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7D6F3C64296CC4DC001AA6DF /* Bindable.swift */,
+				7D6F3C74296D5C3C001AA6DF /* DisposableBindable.swift */,
 				7D66F94A296D919500C3C510 /* UIImageView+ResizeWithImage.swift */,
 			);
 			path = Utils;
@@ -188,8 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				7D6F3C6E296CDD40001AA6DF /* Action.swift */,
-				7D6F3C64296CC4DC001AA6DF /* Bindable.swift */,
-				7D6F3C74296D5C3C001AA6DF /* DisposableBindable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
