@@ -20,6 +20,13 @@
 		7D6F3C56296C8D17001AA6DF /* CatDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C55296C8D17001AA6DF /* CatDetailsViewModel.swift */; };
 		7D6F3C5C296C9E3B001AA6DF /* TwoLabelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C5B296C9E3B001AA6DF /* TwoLabelsCell.swift */; };
 		7D6F3C5E296C9F5B001AA6DF /* ImageWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C5D296C9F5B001AA6DF /* ImageWithLabelView.swift */; };
+		7D6F3C65296CC4DD001AA6DF /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C64296CC4DC001AA6DF /* Bindable.swift */; };
+		7D6F3C67296CCE3E001AA6DF /* TwoLabelsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C66296CCE3E001AA6DF /* TwoLabelsItem.swift */; };
+		7D6F3C6D296CCF92001AA6DF /* HTTPStatusCodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C6C296CCF92001AA6DF /* HTTPStatusCodeList.swift */; };
+		7D6F3C6F296CDD40001AA6DF /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C6E296CDD40001AA6DF /* Action.swift */; };
+		7D6F3C71296CE3ED001AA6DF /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C70296CE3ED001AA6DF /* Button.swift */; };
+		7D6F3C73296CEED2001AA6DF /* ImageWithLabelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C72296CEED2001AA6DF /* ImageWithLabelItem.swift */; };
+		7D6F3C75296D5C3D001AA6DF /* DisposableBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F3C74296D5C3C001AA6DF /* DisposableBindable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		7D6F3C55296C8D17001AA6DF /* CatDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsViewModel.swift; sourceTree = "<group>"; };
 		7D6F3C5B296C9E3B001AA6DF /* TwoLabelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelsCell.swift; sourceTree = "<group>"; };
 		7D6F3C5D296C9F5B001AA6DF /* ImageWithLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithLabelView.swift; sourceTree = "<group>"; };
+		7D6F3C64296CC4DC001AA6DF /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		7D6F3C66296CCE3E001AA6DF /* TwoLabelsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelsItem.swift; sourceTree = "<group>"; };
+		7D6F3C6C296CCF92001AA6DF /* HTTPStatusCodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodeList.swift; sourceTree = "<group>"; };
+		7D6F3C6E296CDD40001AA6DF /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		7D6F3C70296CE3ED001AA6DF /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		7D6F3C72296CEED2001AA6DF /* ImageWithLabelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithLabelItem.swift; sourceTree = "<group>"; };
+		7D6F3C74296D5C3C001AA6DF /* DisposableBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposableBindable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +107,8 @@
 				7D6F3C2D296C724A001AA6DF /* Info.plist */,
 				7D6F3C1F296C7246001AA6DF /* AppDelegate.swift */,
 				7D6F3C44296C7480001AA6DF /* API */,
-				7D6F3C46296C7632001AA6DF /* Models */,
 				7D6F3C45296C74F6001AA6DF /* Networking */,
-				7D6F3C42296C7456001AA6DF /* Presentation */,
+				7D6F3C42296C7456001AA6DF /* Screens */,
 				7D6F3C40296C726D001AA6DF /* Resources */,
 				7D6F3C43296C7478001AA6DF /* UI */,
 				7D6F3C63296CBB5C001AA6DF /* Utils */,
@@ -120,21 +133,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7D6F3C42296C7456001AA6DF /* Presentation */ = {
+		7D6F3C42296C7456001AA6DF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				7D6F3C53296C8D06001AA6DF /* CatDetailsController.swift */,
-				7D6F3C55296C8D17001AA6DF /* CatDetailsViewModel.swift */,
-				7D6F3C4F296C8CEB001AA6DF /* StatusCodeListController.swift */,
-				7D6F3C51296C8CF9001AA6DF /* StatusCodeListViewModel.swift */,
+				7D6F3C76296D5EF9001AA6DF /* CatDetails */,
+				7D6F3C77296D5F01001AA6DF /* StatusCodeList */,
 			);
-			path = Presentation;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		7D6F3C43296C7478001AA6DF /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				7D6F3C61296C9F70001AA6DF /* ImageWithLabelView */,
+				7D6F3C69296CCE53001AA6DF /* ImageWithLabelView */,
+				7D6F3C68296CCE42001AA6DF /* TwoLabelsCell */,
+				7D6F3C70296CE3ED001AA6DF /* Button.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -143,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				7D6F3C4D296C82C6001AA6DF /* CatProvider.swift */,
+				7D6F3C6C296CCF92001AA6DF /* HTTPStatusCodeList.swift */,
 				7D6F3C4B296C82A3001AA6DF /* RequestFactory.swift */,
 			);
 			path = API;
@@ -156,27 +170,50 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		7D6F3C46296C7632001AA6DF /* Models */ = {
+		7D6F3C63296CBB5C001AA6DF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7D6F3C6E296CDD40001AA6DF /* Action.swift */,
+				7D6F3C64296CC4DC001AA6DF /* Bindable.swift */,
+				7D6F3C74296D5C3C001AA6DF /* DisposableBindable.swift */,
 			);
-			path = Models;
+			path = Utils;
 			sourceTree = "<group>";
 		};
-		7D6F3C61296C9F70001AA6DF /* ImageWithLabelView */ = {
+		7D6F3C68296CCE42001AA6DF /* TwoLabelsCell */ = {
+			isa = PBXGroup;
+			children = (
+				7D6F3C5B296C9E3B001AA6DF /* TwoLabelsCell.swift */,
+				7D6F3C66296CCE3E001AA6DF /* TwoLabelsItem.swift */,
+			);
+			path = TwoLabelsCell;
+			sourceTree = "<group>";
+		};
+		7D6F3C69296CCE53001AA6DF /* ImageWithLabelView */ = {
 			isa = PBXGroup;
 			children = (
 				7D6F3C5D296C9F5B001AA6DF /* ImageWithLabelView.swift */,
-				7D6F3C5B296C9E3B001AA6DF /* TwoLabelsCell.swift */,
+				7D6F3C72296CEED2001AA6DF /* ImageWithLabelItem.swift */,
 			);
 			path = ImageWithLabelView;
 			sourceTree = "<group>";
 		};
-		7D6F3C63296CBB5C001AA6DF /* Utils */ = {
+		7D6F3C76296D5EF9001AA6DF /* CatDetails */ = {
 			isa = PBXGroup;
 			children = (
+				7D6F3C53296C8D06001AA6DF /* CatDetailsController.swift */,
+				7D6F3C55296C8D17001AA6DF /* CatDetailsViewModel.swift */,
 			);
-			path = Utils;
+			path = CatDetails;
+			sourceTree = "<group>";
+		};
+		7D6F3C77296D5F01001AA6DF /* StatusCodeList */ = {
+			isa = PBXGroup;
+			children = (
+				7D6F3C4F296C8CEB001AA6DF /* StatusCodeListController.swift */,
+				7D6F3C51296C8CF9001AA6DF /* StatusCodeListViewModel.swift */,
+			);
+			path = StatusCodeList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,13 +317,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D6F3C4E296C82C6001AA6DF /* CatProvider.swift in Sources */,
+				7D6F3C73296CEED2001AA6DF /* ImageWithLabelItem.swift in Sources */,
 				7D6F3C4C296C82A3001AA6DF /* RequestFactory.swift in Sources */,
+				7D6F3C67296CCE3E001AA6DF /* TwoLabelsItem.swift in Sources */,
 				7D6F3C20296C7246001AA6DF /* AppDelegate.swift in Sources */,
 				7D6F3C56296C8D17001AA6DF /* CatDetailsViewModel.swift in Sources */,
+				7D6F3C65296CC4DD001AA6DF /* Bindable.swift in Sources */,
 				7D6F3C4A296C81CE001AA6DF /* RequestExecuter.swift in Sources */,
 				7D6F3C5C296C9E3B001AA6DF /* TwoLabelsCell.swift in Sources */,
 				7D6F3C5E296C9F5B001AA6DF /* ImageWithLabelView.swift in Sources */,
 				7D6F3C54296C8D06001AA6DF /* CatDetailsController.swift in Sources */,
+				7D6F3C71296CE3ED001AA6DF /* Button.swift in Sources */,
+				7D6F3C75296D5C3D001AA6DF /* DisposableBindable.swift in Sources */,
+				7D6F3C6D296CCF92001AA6DF /* HTTPStatusCodeList.swift in Sources */,
+				7D6F3C6F296CDD40001AA6DF /* Action.swift in Sources */,
 				7D6F3C50296C8CEB001AA6DF /* StatusCodeListController.swift in Sources */,
 				7D6F3C52296C8CF9001AA6DF /* StatusCodeListViewModel.swift in Sources */,
 			);
