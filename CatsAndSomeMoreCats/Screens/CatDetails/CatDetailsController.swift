@@ -51,7 +51,7 @@ final class CatDetailsController: UIViewController {
     // MARK: – Set up views –
 
     private func setUpView() {
-        imageWithLabelView.apply(viewModel.imageWithLabelItem)
+        imageWithLabelView.apply(viewModel.imageWithTitleItem)
         imageWithLabelView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageWithLabelView)
 

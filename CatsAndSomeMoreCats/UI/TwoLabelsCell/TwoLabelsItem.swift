@@ -10,8 +10,8 @@ import Foundation
 struct TwoLabelsItem {
     let leftTitle: String
     let wasTapped: DisposableBindable<Bool>
-    let rightTitleInitially: String = "Tap to see a cat 🐈‍⬛"
-    let rightTitleWhenTapped: String = "🔥 Yay, you saw a cat."
+    let rightTitleInitially: String = "Tap me 🐈‍⬛"
+    let rightTitleWhenTapped: String = "🔥 Yay, you tapped"
 }
 
 extension TwoLabelsCell {

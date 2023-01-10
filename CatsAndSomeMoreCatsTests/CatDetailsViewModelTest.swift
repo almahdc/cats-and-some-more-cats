@@ -41,7 +41,7 @@ final class CatDetailsViewModelTest: XCTestCase {
         sut.start()
         
         // then
-        guard case .loading = sut.imageWithLabelItem.loadingState.value else {
+        guard case .loading = sut.imageWithTitleItem.imageLoadingState.value else {
             fatalError("Expected loading loading state")
         }
     }
@@ -54,7 +54,7 @@ final class CatDetailsViewModelTest: XCTestCase {
         sut.start()
         
         // then
-        guard case .loaded = sut.imageWithLabelItem.loadingState.value else {
+        guard case .loaded = sut.imageWithTitleItem.imageLoadingState.value else {
             fatalError("Expected loaded loading state")
         }
     }
@@ -67,7 +67,7 @@ final class CatDetailsViewModelTest: XCTestCase {
         sut.start()
         
         // then
-        guard case .failure = sut.imageWithLabelItem.loadingState.value else {
+        guard case .failed = sut.imageWithTitleItem.imageLoadingState.value else {
             fatalError("Expected failure loading state")
         }
     }
@@ -81,7 +81,7 @@ final class CatDetailsViewModelTest: XCTestCase {
         sut.start()
         
         // then
-        XCTAssertEqual(sut.imageWithLabelItem.imageTitle, statusCode)
+        XCTAssertEqual(sut.imageWithTitleItem.title, statusCode)
     }
     
     // MARK: – Network request –

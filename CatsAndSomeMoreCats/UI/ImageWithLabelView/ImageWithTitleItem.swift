@@ -1,5 +1,5 @@
 //
-//  ImageWithLabelItem.swift
+//  ImageWithTitleItem.swift
 //  CatsAndSomeMoreCats
 //
 //  Created by Alma Hodzic on 10.01.23.
@@ -7,40 +7,40 @@
 
 import UIKit
 
-enum LoadingState {
+enum ImageLoadingState {
     case loading
     case loaded(image: UIImage)
-    case failure(action: Action)
+    case failed(action: Action)
 }
 
-struct ImageWithLabelItem {
-    let imageTitle: String
-    let loadingState: Bindable<LoadingState>
+struct ImageWithTitleItem {
+    let title: String
+    let imageLoadingState: Bindable<ImageLoadingState>
 }
 
 extension ImageWithLabelView {
-    func apply(_ item: ImageWithLabelItem) {
-        titleLabel.text = item.imageTitle
+    func apply(_ item: ImageWithTitleItem) {
+        titleLabel.text = item.title
 
-        item.loadingState.bind(self) { observer, loadingState in
+        item.imageLoadingState.bind(self) { observer, loadingState in
             switch loadingState {
             case .loading:
                 observer.activityIndicator.startAnimating()
                 observer.activityIndicator.isHidden = false
-                observer.button.isHidden = true
                 observer.imageView.isHidden = true
+                observer.button.isHidden = true
             case let .loaded(image):
-                observer.imageView.image = image
                 observer.activityIndicator.stopAnimating()
                 observer.activityIndicator.isHidden = true
-                observer.button.isHidden = true
                 observer.imageView.isHidden = false
-            case let .failure(action):
+                observer.imageView.image = image
+                observer.button.isHidden = true
+            case let .failed(action):
+                observer.activityIndicator.stopAnimating()
+                observer.activityIndicator.isHidden = true
+                observer.imageView.isHidden = true
                 observer.button.didTapAction = action
                 observer.button.isHidden = false
-                observer.imageView.isHidden = true
-                observer.activityIndicator.stopAnimating()
-                observer.activityIndicator.isHidden = true
             }
         }
     }

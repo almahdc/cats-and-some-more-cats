@@ -14,12 +14,12 @@ final class CatDetailsViewModel {
 
     // MARK: – Properties –
 
-    lazy var imageWithLabelItem: ImageWithLabelItem = {
-        let imageWithLabelItem = ImageWithLabelItem(
-            imageTitle: statusCode,
-            loadingState: .init(value: .loading)
+    lazy var imageWithTitleItem: ImageWithTitleItem = {
+        let imageWithTitleItem = ImageWithTitleItem(
+            title: statusCode,
+            imageLoadingState: .init(value: .loading)
         )
-        return imageWithLabelItem
+        return imageWithTitleItem
     }()
 
     private var statusCode: String
@@ -41,7 +41,7 @@ final class CatDetailsViewModel {
     // MARK: – Network requests –
     
     private func requestCat(statusCode: String) {
-        imageWithLabelItem.loadingState.value = .loading
+        imageWithTitleItem.imageLoadingState.value = .loading
         catProvider.cat(statusCode: statusCode) { [weak self] result in
             switch result {
             case let .success(imageData):
@@ -49,7 +49,7 @@ final class CatDetailsViewModel {
                     self?.handleFailure()
                     return
                 }
-                self?.imageWithLabelItem.loadingState.value = .loaded(image: image)
+                self?.imageWithTitleItem.imageLoadingState.value = .loaded(image: image)
             case .failure:
                 self?.handleFailure()
             }
@@ -57,7 +57,7 @@ final class CatDetailsViewModel {
     }
     
     private func handleFailure() {
-        imageWithLabelItem.loadingState.value = .failure(action: { [unowned self] in requestCat(statusCode: statusCode) })
-        didFail("Sorry, the data can't be shown at the moment.")
+        imageWithTitleItem.imageLoadingState.value = .failed(action: { [unowned self] in requestCat(statusCode: statusCode) })
+        didFail("This cat is nowhere to be found 🙀")
     }
 }
