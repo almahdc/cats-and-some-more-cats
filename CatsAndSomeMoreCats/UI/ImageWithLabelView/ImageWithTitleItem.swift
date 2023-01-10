@@ -27,18 +27,17 @@ extension ImageWithLabelView {
             case .loading:
                 observer.activityIndicator.startAnimating()
                 observer.activityIndicator.isHidden = false
-                observer.imageView.isHidden = true
+                observer.image = nil
                 observer.button.isHidden = true
             case let .loaded(image):
                 observer.activityIndicator.stopAnimating()
                 observer.activityIndicator.isHidden = true
-                observer.imageView.isHidden = false
-                observer.imageView.image = image
+                observer.image = image
                 observer.button.isHidden = true
             case let .failed(action):
                 observer.activityIndicator.stopAnimating()
                 observer.activityIndicator.isHidden = true
-                observer.imageView.isHidden = true
+                observer.image = nil
                 observer.button.didTapAction = action
                 observer.button.isHidden = false
             }
