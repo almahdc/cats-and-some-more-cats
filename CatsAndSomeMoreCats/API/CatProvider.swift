@@ -5,7 +5,6 @@
 //  Created by Alma Hodzic on 09.01.23.
 //
 
-// TODO: – Check if I could avoid import UIKit here? –
 import UIKit
 
 final class CatProvider {
