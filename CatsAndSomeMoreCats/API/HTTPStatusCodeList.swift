@@ -18,7 +18,6 @@ enum HTTPStatusCode: Int, CaseIterable {
     case accepted = 202
     case nonAuthoritativeInformation = 203
     case noContent = 204
-    case resetContent = 205
     case partialContent = 206
     case multiStatus = 207
 
