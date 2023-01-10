@@ -8,7 +8,7 @@
 import UIKit
 
 final class TwoLabelsCell: DisposableObserverableCell {
-    var didTapCell: (() -> Void)!
+    var didTapCell: Action!
 
     private enum Constants {
         static let spacing = 16.0
