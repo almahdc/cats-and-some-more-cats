@@ -10,6 +10,7 @@ import UIKit
 final class TwoLabelsCell: DisposableObserverableCell {
     private enum Constants {
         static let spacing = 16.0
+        static let leftLabelFontSize = 18.0
     }
 
     // MARK: – Actions –
@@ -20,6 +21,7 @@ final class TwoLabelsCell: DisposableObserverableCell {
 
     var leftLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: Constants.leftLabelFontSize)
         return label
     }()
 
