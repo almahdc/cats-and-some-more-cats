@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RequestExecuter {
+final class RequestExecuter {
     // MARK: – Execute request –
 
     func execute(request: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) {

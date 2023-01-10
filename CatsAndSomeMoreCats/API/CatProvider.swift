@@ -8,7 +8,7 @@
 // TODO: – Check if I could avoid import UIKit here? –
 import UIKit
 
-class CatProvider {
+final class CatProvider {
     enum ImageError: Error {
         case badData
         case generic(error: Error)
