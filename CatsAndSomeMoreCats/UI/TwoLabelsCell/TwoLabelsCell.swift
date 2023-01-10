@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TwoLabelsCell: UITableViewCell {
+final class TwoLabelsCell: DisposableObserverableCell {
+    var didTapCell: (() -> Void)!
+
     private enum Constants {
         static let spacing = 16.0
     }
@@ -48,7 +50,6 @@ class TwoLabelsCell: UITableViewCell {
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.spacing)
         ]
-        
         NSLayoutConstraint.activate(stackViewConstraints)
     }
     
