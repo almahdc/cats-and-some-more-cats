@@ -48,7 +48,7 @@ final class CatDetailsViewModelTest: XCTestCase {
     
     func testLoadingStateIsLoadedOnRequestSuccess() {
         // given
-        catProvider.stubbedCatCompletionResult = (.success(StubModel.image), ())
+        catProvider.stubbedCatCompletionResult = (.success(StubModel.imageData), ())
         
         // when
         sut.start()
@@ -61,7 +61,7 @@ final class CatDetailsViewModelTest: XCTestCase {
     
     func testLoadingStateIsFailedOnRequestFailure() {
         // given
-        catProvider.stubbedCatCompletionResult = (.failure(.badData), ())
+        catProvider.stubbedCatCompletionResult = (.failure(.generic), ())
         
         // when
         sut.start()
@@ -86,8 +86,8 @@ final class CatDetailsViewModelTest: XCTestCase {
     
     // MARK: – Network request –
     
-    func testInvokesDidFailAfterRequestFailsWithBadData() {
-        catProvider.stubbedCatCompletionResult = (.failure(.badData), ())
+    func testInvokesDidFailOnRequestFailure() {
+        catProvider.stubbedCatCompletionResult = (.failure(.generic), ())
         var count = 0
         sut.didFail = { _ in count += 1}
         
@@ -98,11 +98,8 @@ final class CatDetailsViewModelTest: XCTestCase {
         XCTAssertEqual(count, 1)
     }
     
-    func testInvokesDidFailAfterRequestFailsWithGenericError() {
-        enum ErroD: Error {
-            case test
-        }
-        catProvider.stubbedCatCompletionResult = (.failure(.generic(error: ErroD.test)), ())
+    func testInvokesDidFailOnImageDataConversionFailure() {
+        catProvider.stubbedCatCompletionResult = (.success(Data()), ())
         var count = 0
         sut.didFail = { _ in count += 1}
         
@@ -113,47 +110,42 @@ final class CatDetailsViewModelTest: XCTestCase {
         XCTAssertEqual(count, 1)
     }
     
-    func testImageSetAfterRequestIsSuccessful() {
+    func testDoesNotInvokeDidFilaOnRequestSuccess() {
         // given
-        let image = StubModel.image
-        catProvider.stubbedCatCompletionResult = (.success(image), ())
+        catProvider.stubbedCatCompletionResult = (.success(StubModel.imageData), ())
+        var count = 0
+        sut.didFail = { _ in count += 1}
         
         // when
         sut.start()
         
         // then
-        guard case let .loaded(receivedImage) = sut.imageWithLabelItem.loadingState.value else {
-            fatalError("Expected loaded loading state")
-        }
-
-        XCTAssertEqual(receivedImage, image)
+        XCTAssertEqual(count, 0)
     }
 
 }
 
-final class DummyCatProvider: CatProviding {
-    var invokedCat = false
-    var invokedCatCount = 0
-    var invokedCatParameters: (statusCode: String, Void)?
-    var invokedCatParametersList = [(statusCode: String, Void)]()
-    var stubbedCatCompletionResult: (Result<UIImage,  CatsAndSomeMoreCats.ImageError>, Void)?
+// MARK: – DummyCatProvider –
 
-    func cat(statusCode: String, completion: @escaping (Result<UIImage, CatsAndSomeMoreCats.ImageError>) -> Void) {
+private final class DummyCatProvider: CatProviding {
+    var invokedCat = false
+    var stubbedCatCompletionResult: (Result<Data,  CatsAndSomeMoreCats.ImageError>, Void)?
+
+    func cat(statusCode: String, completion: @escaping (Result<Data, CatsAndSomeMoreCats.ImageError>) -> Void) {
         invokedCat = true
-        invokedCatCount += 1
-        invokedCatParameters = ((statusCode, ()))
-        invokedCatParametersList.append((statusCode, ()))
         if let result = stubbedCatCompletionResult {
             completion(result.0)
         }
     }
 }
 
-enum StubModel {
-    public static var image: UIImage = {
+// MARK: – StubModel –
+
+private enum StubModel {
+    static var imageData = image.pngData()!
+
+    private static var image: UIImage = {
         let imageData = Data(base64Encoded: "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAAD5Ip3+AAAADUlEQVQIHWP4v5ThPwAG7wKkSFotfwAAAABJRU5ErkJggg==")
         return .init(data: imageData!)!
     }()
-
-    public static var imageData = image.pngData()!
 }
