@@ -8,11 +8,13 @@
 import UIKit
 
 final class TwoLabelsCell: DisposableObserverableCell {
-    var didTapCell: Action!
-
     private enum Constants {
         static let spacing = 16.0
     }
+
+    // MARK: – Actions –
+
+    var didTapCell: Action!
 
     // MARK: – Properties –
 
@@ -34,6 +36,12 @@ final class TwoLabelsCell: DisposableObserverableCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpViews()
     }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: – Set up views –
     
     private func setUpViews() {
         let stackView = UIStackView(arrangedSubviews: [leftLabel, rightLabel])
@@ -51,9 +59,5 @@ final class TwoLabelsCell: DisposableObserverableCell {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.spacing)
         ]
         NSLayoutConstraint.activate(stackViewConstraints)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

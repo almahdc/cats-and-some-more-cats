@@ -48,6 +48,12 @@ final class ImageWithLabelView: UIView {
         setUpViews()
     }
 
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: – Set up views –
+
     private func setUpViews() {
         backgroundColor = .white
 
@@ -66,9 +72,5 @@ final class ImageWithLabelView: UIView {
             stackView.widthAnchor.constraint(equalTo: layoutMarginsGuide.widthAnchor, constant: -2*Constants.spacing)
         ]
         NSLayoutConstraint.activate(stackViewConstraints)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
