@@ -7,6 +7,7 @@
 - MVVM + Clean Architecture (at least this was the desired outcome)
 - Business logic is unit-tested
 - No frameworks other than UIKit and Foundation were used
+- The app is suitable for usage on iPhone and iPad
 
 # Features:
 - Screen with a list of status codes
