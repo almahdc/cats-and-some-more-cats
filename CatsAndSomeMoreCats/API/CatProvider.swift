@@ -7,12 +7,16 @@
 
 import UIKit
 
-final class CatProvider {
-    enum ImageError: Error {
-        case badData
-        case generic(error: Error)
-    }
+enum ImageError: Error {
+    case badData
+    case generic(error: Error)
+}
 
+protocol CatProviding {
+    func cat(statusCode: String, completion: @escaping (Result<UIImage, ImageError>) -> Void)
+}
+
+final class CatProvider: CatProviding {
     // MARK: – Properties –
 
     private let requestExecuter: RequestExecuter

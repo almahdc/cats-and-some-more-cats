@@ -69,6 +69,6 @@ final class CatDetailsController: UIViewController {
 
 extension CatDetailsController {
     static func make(statusCode: String) -> UIViewController {
-        CatDetailsController(viewModel: .init(statusCode: statusCode, catProvider: .init(requestExecuter: .init())))
+        CatDetailsController(viewModel: .init(statusCode: statusCode, catProvider: CatProvider(requestExecuter: .init())))
     }
 }

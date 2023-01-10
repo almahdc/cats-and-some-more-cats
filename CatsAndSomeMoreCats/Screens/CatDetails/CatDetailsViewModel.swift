@@ -23,11 +23,11 @@ final class CatDetailsViewModel {
     }()
 
     private var statusCode: String
-    private let catProvider: CatProvider
+    private let catProvider: CatProviding
     
     // MARK: – Init –
     
-    init(statusCode: String, catProvider: CatProvider) {
+    init(statusCode: String, catProvider: CatProviding) {
         self.statusCode = statusCode
         self.catProvider = catProvider
     }
